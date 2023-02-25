@@ -29,9 +29,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-          pwd
-          whoami
-          mkdir demo
           #docker exec -it onlinegameV2 echo "I'm inside the container!"
-          #docker exec -it onlinegameV2 bash -c "cd online-game-backend;git pull"
+          docker exec -it 6e0c19ab86bd bash -c "cd /usr/share/nginx/html;git pull"
           # docker restart onlinegameV2
