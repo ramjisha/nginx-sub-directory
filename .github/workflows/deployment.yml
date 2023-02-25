@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-    - name: pull the latest files in docker
+    - name: pull the latest files in github
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
@@ -29,6 +29,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-          #docker exec -it onlinegameV2 echo "I'm inside the container!"
-          docker exec -T 6e0c19ab86bd bash -c "cd /usr/share/nginx/html;git pull"
-          # docker restart onlinegameV2
+          docker exec 6e0c19ab86bd bash -c "cd /usr/share/nginx/html;git pull"
