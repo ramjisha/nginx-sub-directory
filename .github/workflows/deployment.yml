@@ -30,6 +30,7 @@ jobs:
         port: 22
         script: |
           pwd
+          whoami
           #docker exec -it onlinegameV2 echo "I'm inside the container!"
           #docker exec -it onlinegameV2 bash -c "cd online-game-backend;git pull"
           # docker restart onlinegameV2
