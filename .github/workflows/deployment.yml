@@ -29,8 +29,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-          sudo bash
-          whoami
+          pwd
           #docker exec -it onlinegameV2 echo "I'm inside the container!"
           #docker exec -it onlinegameV2 bash -c "cd online-game-backend;git pull"
           # docker restart onlinegameV2
